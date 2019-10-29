@@ -18,6 +18,8 @@
 #include "driver/i2c.h"
 #include "esp_task_wdt.h"
 
+#include "SSD1306_I2C.h"
+
 
 static esp_err_t i2c_master_init()
 {
@@ -40,6 +42,7 @@ I2C_scan(void *args) {
 	
 	ESP_ERROR_CHECK(i2c_master_init());
 	uint8_t i ;
+	
 		
 	for (;;) {
 		
@@ -51,7 +54,7 @@ I2C_scan(void *args) {
 	   		i2c_master_write_byte(cmd,(i<<1),true);
 			i2c_master_stop(cmd);
 			esp_err_t ret = i2c_master_cmd_begin(I2C_NUM_0, cmd, 1000 / portTICK_RATE_MS);
-    			i2c_cmd_link_delete(cmd);
+    		i2c_cmd_link_delete(cmd);
 			if(ret == ESP_OK)
 			{
 			   printf("found a slave at  %#02x !! \n",i);
