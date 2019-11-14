@@ -38,7 +38,7 @@ int packSendPayload(uint8_t * payload, int lenPay) {
 
 	// Sending package
 	//serialPort->write(messageSend, count);
-	uart_tx_chars(UART_NUM_1,messageSend,count);
+	uart_tx_chars(UART_NUM_1,(const char *)messageSend,count);
 	// Returns number of send bytes
 	return count;
 }
@@ -54,7 +54,7 @@ bool processReadPacket(uint8_t * message) {
 
 	switch (packetId){
 		case COMM_GET_VALUES: // Structure defined here: https://github.com/vedderb/bldc/blob/43c3bbaf91f5052a35b75c2ff17b5fe99fad94d1/commands.c#L164
-
+			printf("process COMM_GET_VALUES data \n ");
 			ind = 4; // Skip the first 4 bytes 
 			data.avgMotorCurrent 	= buffer_get_float32(message, 100.0, &ind);
 			data.avgInputCurrent 	= buffer_get_float32(message, 100.0, &ind);
@@ -85,7 +85,7 @@ bool getVescValues(void) {
 	packSendPayload(command, 1);
 	// delay(1); //needed, otherwise data is not read
 
-	int lenPayload;
+	size_t lenPayload;
 	uart_get_buffered_data_len(UART_NUM_1, &lenPayload);
 
 	if (lenPayload > 55) {
@@ -101,16 +101,17 @@ bool getVescValues(void) {
 
 bool getVescValuesfwd(uint8_t canID ) {
 	uint8_t index = 0;
-	uint8_t command[3] = { COMM_GET_VALUES };
+	uint8_t command[3];
+	//command[0] = ;
 	uint8_t payload[256];
-	 command[index++] = { COMM_FORWARD_CAN }; //Forwarding CAN 
+	 command[index++] =  COMM_FORWARD_CAN ; //Forwarding CAN 
 	 command[index++] = canID;                //Sending CAN id
-	 command[index++] = { COMM_GET_VALUES };  //Requesting Values
+	 command[index++] =  COMM_GET_VALUES ;  //Requesting Values
 
 	packSendPayload(command,3);
 	// delay(1); //needed, otherwise data is not read
 
-	int lenPayload;
+	size_t lenPayload;
 	uart_get_buffered_data_len(UART_NUM_1, &lenPayload);
 
 	if (lenPayload > 55) {

@@ -26,7 +26,7 @@
 #define BUFFER_H_
 
 #include <stdint.h>
-
+#include <stdbool.h>
 void buffer_append_int16(uint8_t* buffer, int16_t number, int32_t *index);
 void buffer_append_uint16(uint8_t* buffer, uint16_t number, int32_t *index);
 void buffer_append_int32(uint8_t* buffer, int32_t number, int32_t *index);
