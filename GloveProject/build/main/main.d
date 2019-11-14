@@ -84,7 +84,7 @@ main.o: /home/pierre/esp/ESP32_FreeRTOS/GloveProject/main/main.c \
  /home/pierre/esp/esp-idf/components/freertos/include/freertos/queue.h \
  /home/pierre/esp/esp-idf/components/freertos/include/freertos/semphr.h \
  /home/pierre/esp/esp-idf/components/freertos/include/freertos/queue.h \
- /home/pierre/esp/ESP32_FreeRTOS/GloveProject/main/RGB.h \
+ /home/pierre/esp/ESP32_FreeRTOS/GloveProject/components/RGB/RGB.h \
  /home/pierre/esp/esp-idf/components/driver/include/driver/ledc.h \
  /home/pierre/esp/esp-idf/components/driver/include/driver/periph_ctrl.h \
  /home/pierre/esp/esp-idf/components/soc/esp32/include/soc/dport_reg.h \
@@ -92,10 +92,10 @@ main.o: /home/pierre/esp/ESP32_FreeRTOS/GloveProject/main/main.c \
  /home/pierre/esp/esp-idf/components/esp32/include/esp_dport_access.h \
  /home/pierre/esp/esp-idf/components/soc/esp32/include/soc/uart_reg.h \
  /home/pierre/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h \
- /home/pierre/esp/ESP32_FreeRTOS/GloveProject/main/adc.h \
+ /home/pierre/esp/ESP32_FreeRTOS/GloveProject/components/ADC/adc.h \
  /home/pierre/esp/esp-idf/components/driver/include/driver/adc.h \
  /home/pierre/esp/esp-idf/components/soc/esp32/include/soc/adc_channel.h \
- /home/pierre/esp/ESP32_FreeRTOS/GloveProject/main/bt_spp.h \
+ /home/pierre/esp/ESP32_FreeRTOS/GloveProject/components/bluetooth/bt_spp.h \
  /home/pierre/esp/esp-idf/components/newlib/include/string.h \
  /home/pierre/esp/esp-idf/components/newlib/include/sys/string.h \
  /home/pierre/esp/esp-idf/components/nvs_flash/include/nvs.h \
@@ -282,7 +282,7 @@ main.o: /home/pierre/esp/ESP32_FreeRTOS/GloveProject/main/main.c \
 
 /home/pierre/esp/esp-idf/components/freertos/include/freertos/queue.h:
 
-/home/pierre/esp/ESP32_FreeRTOS/GloveProject/main/RGB.h:
+/home/pierre/esp/ESP32_FreeRTOS/GloveProject/components/RGB/RGB.h:
 
 /home/pierre/esp/esp-idf/components/driver/include/driver/ledc.h:
 
@@ -298,13 +298,13 @@ main.o: /home/pierre/esp/ESP32_FreeRTOS/GloveProject/main/main.c \
 
 /home/pierre/esp/esp-idf/components/soc/esp32/include/soc/periph_defs.h:
 
-/home/pierre/esp/ESP32_FreeRTOS/GloveProject/main/adc.h:
+/home/pierre/esp/ESP32_FreeRTOS/GloveProject/components/ADC/adc.h:
 
 /home/pierre/esp/esp-idf/components/driver/include/driver/adc.h:
 
 /home/pierre/esp/esp-idf/components/soc/esp32/include/soc/adc_channel.h:
 
-/home/pierre/esp/ESP32_FreeRTOS/GloveProject/main/bt_spp.h:
+/home/pierre/esp/ESP32_FreeRTOS/GloveProject/components/bluetooth/bt_spp.h:
 
 /home/pierre/esp/esp-idf/components/newlib/include/string.h:
 

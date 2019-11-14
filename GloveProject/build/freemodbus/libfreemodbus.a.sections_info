@@ -380,92 +380,6 @@ Idx Name          Size      VMA       LMA       File off  Algn
   9 .xtensa.info  00000038  00000000  00000000  000002ce  2**0
                   CONTENTS, READONLY
 
-mbutils.o:     file format elf32-xtensa-le
-
-Sections:
-Idx Name          Size      VMA       LMA       File off  Algn
-  0 .literal.xMBUtilSetBits 00000010  00000000  00000000  00000034  2**2
-                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  1 .text         00000000  00000000  00000000  00000044  2**0
-                  CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .data         00000000  00000000  00000000  00000044  2**0
-                  CONTENTS, ALLOC, LOAD, DATA
-  3 .bss          00000000  00000000  00000000  00000044  2**0
-                  ALLOC
-  4 .rodata.str1.4 0000005a  00000000  00000000  00000044  2**2
-                  CONTENTS, ALLOC, LOAD, READONLY, DATA
-  5 .text.xMBUtilSetBits 00000077  00000000  00000000  000000a0  2**2
-                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  6 .text.xMBUtilGetBits 0000003b  00000000  00000000  00000118  2**2
-                  CONTENTS, ALLOC, LOAD, READONLY, CODE
-  7 .text.prveMBError2Exception 0000001e  00000000  00000000  00000154  2**2
-                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  8 .rodata.__func__$6608 0000000f  00000000  00000000  00000174  2**2
-                  CONTENTS, ALLOC, LOAD, READONLY, DATA
-  9 .debug_frame  00000058  00000000  00000000  00000184  2**2
-                  CONTENTS, RELOC, READONLY, DEBUGGING
- 10 .debug_info   000002ee  00000000  00000000  000001dc  2**0
-                  CONTENTS, RELOC, READONLY, DEBUGGING
- 11 .debug_abbrev 00000118  00000000  00000000  000004ca  2**0
-                  CONTENTS, READONLY, DEBUGGING
- 12 .debug_loc    000002a6  00000000  00000000  000005e2  2**0
-                  CONTENTS, RELOC, READONLY, DEBUGGING
- 13 .debug_aranges 00000030  00000000  00000000  00000888  2**0
-                  CONTENTS, RELOC, READONLY, DEBUGGING
- 14 .debug_ranges 00000020  00000000  00000000  000008b8  2**0
-                  CONTENTS, RELOC, READONLY, DEBUGGING
- 15 .debug_line   0000026f  00000000  00000000  000008d8  2**0
-                  CONTENTS, RELOC, READONLY, DEBUGGING
- 16 .debug_str    000003a8  00000000  00000000  00000b47  2**0
-                  CONTENTS, READONLY, DEBUGGING
- 17 .comment      0000003b  00000000  00000000  00000eef  2**0
-                  CONTENTS, READONLY
- 18 .xtensa.info  00000038  00000000  00000000  00000f2a  2**0
-                  CONTENTS, READONLY
- 19 .xt.lit       00000008  00000000  00000000  00000f62  2**0
-                  CONTENTS, RELOC, READONLY
- 20 .xt.prop      000000f0  00000000  00000000  00000f6a  2**0
-                  CONTENTS, RELOC, READONLY
-
-mbfuncinput.o:     file format elf32-xtensa-le
-
-Sections:
-Idx Name          Size      VMA       LMA       File off  Algn
-  0 .literal.eMBFuncReadInputRegister 00000008  00000000  00000000  00000034  2**2
-                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  1 .text         00000000  00000000  00000000  0000003c  2**0
-                  CONTENTS, ALLOC, LOAD, READONLY, CODE
-  2 .data         00000000  00000000  00000000  0000003c  2**0
-                  CONTENTS, ALLOC, LOAD, DATA
-  3 .bss          00000000  00000000  00000000  0000003c  2**0
-                  ALLOC
-  4 .text.eMBFuncReadInputRegister 0000007d  00000000  00000000  0000003c  2**2
-                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
-  5 .debug_frame  00000028  00000000  00000000  000000bc  2**2
-                  CONTENTS, RELOC, READONLY, DEBUGGING
-  6 .debug_info   000001fa  00000000  00000000  000000e4  2**0
-                  CONTENTS, RELOC, READONLY, DEBUGGING
-  7 .debug_abbrev 000000e7  00000000  00000000  000002de  2**0
-                  CONTENTS, READONLY, DEBUGGING
-  8 .debug_loc    00000186  00000000  00000000  000003c5  2**0
-                  CONTENTS, RELOC, READONLY, DEBUGGING
-  9 .debug_aranges 00000020  00000000  00000000  0000054b  2**0
-                  CONTENTS, RELOC, READONLY, DEBUGGING
- 10 .debug_ranges 00000010  00000000  00000000  0000056b  2**0
-                  CONTENTS, RELOC, READONLY, DEBUGGING
- 11 .debug_line   0000018d  00000000  00000000  0000057b  2**0
-                  CONTENTS, RELOC, READONLY, DEBUGGING
- 12 .debug_str    00000373  00000000  00000000  00000708  2**0
-                  CONTENTS, READONLY, DEBUGGING
- 13 .comment      0000003b  00000000  00000000  00000a7b  2**0
-                  CONTENTS, READONLY
- 14 .xtensa.info  00000038  00000000  00000000  00000ab6  2**0
-                  CONTENTS, READONLY
- 15 .xt.lit       00000008  00000000  00000000  00000aee  2**0
-                  CONTENTS, RELOC, READONLY
- 16 .xt.prop      00000078  00000000  00000000  00000af6  2**0
-                  CONTENTS, RELOC, READONLY
-
 mbfuncholding.o:     file format elf32-xtensa-le
 
 Sections:
@@ -515,6 +429,45 @@ Idx Name          Size      VMA       LMA       File off  Algn
  21 .xt.lit       00000020  00000000  00000000  0000160f  2**0
                   CONTENTS, RELOC, READONLY
  22 .xt.prop      0000021c  00000000  00000000  0000162f  2**0
+                  CONTENTS, RELOC, READONLY
+
+mbfuncinput.o:     file format elf32-xtensa-le
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .literal.eMBFuncReadInputRegister 00000008  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .text         00000000  00000000  00000000  0000003c  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .data         00000000  00000000  00000000  0000003c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  3 .bss          00000000  00000000  00000000  0000003c  2**0
+                  ALLOC
+  4 .text.eMBFuncReadInputRegister 0000007d  00000000  00000000  0000003c  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  5 .debug_frame  00000028  00000000  00000000  000000bc  2**2
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+  6 .debug_info   000001fa  00000000  00000000  000000e4  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+  7 .debug_abbrev 000000e7  00000000  00000000  000002de  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_loc    00000186  00000000  00000000  000003c5  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+  9 .debug_aranges 00000020  00000000  00000000  0000054b  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 10 .debug_ranges 00000010  00000000  00000000  0000056b  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 11 .debug_line   0000018d  00000000  00000000  0000057b  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 12 .debug_str    00000373  00000000  00000000  00000708  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .comment      0000003b  00000000  00000000  00000a7b  2**0
+                  CONTENTS, READONLY
+ 14 .xtensa.info  00000038  00000000  00000000  00000ab6  2**0
+                  CONTENTS, READONLY
+ 15 .xt.lit       00000008  00000000  00000000  00000aee  2**0
+                  CONTENTS, RELOC, READONLY
+ 16 .xt.prop      00000078  00000000  00000000  00000af6  2**0
                   CONTENTS, RELOC, READONLY
 
 mbfuncdisc.o:     file format elf32-xtensa-le
@@ -645,6 +598,53 @@ Idx Name          Size      VMA       LMA       File off  Algn
  19 .xt.lit       00000018  00000000  00000000  000011fb  2**0
                   CONTENTS, RELOC, READONLY
  20 .xt.prop      000001e0  00000000  00000000  00001213  2**0
+                  CONTENTS, RELOC, READONLY
+
+mbutils.o:     file format elf32-xtensa-le
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .literal.xMBUtilSetBits 00000010  00000000  00000000  00000034  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  1 .text         00000000  00000000  00000000  00000044  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .data         00000000  00000000  00000000  00000044  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  3 .bss          00000000  00000000  00000000  00000044  2**0
+                  ALLOC
+  4 .rodata.str1.4 0000005a  00000000  00000000  00000044  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  5 .text.xMBUtilSetBits 00000077  00000000  00000000  000000a0  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  6 .text.xMBUtilGetBits 0000003b  00000000  00000000  00000118  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  7 .text.prveMBError2Exception 0000001e  00000000  00000000  00000154  2**2
+                  CONTENTS, ALLOC, LOAD, RELOC, READONLY, CODE
+  8 .rodata.__func__$6608 0000000f  00000000  00000000  00000174  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  9 .debug_frame  00000058  00000000  00000000  00000184  2**2
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 10 .debug_info   000002ee  00000000  00000000  000001dc  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 11 .debug_abbrev 00000118  00000000  00000000  000004ca  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_loc    000002a6  00000000  00000000  000005e2  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 13 .debug_aranges 00000030  00000000  00000000  00000888  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 14 .debug_ranges 00000020  00000000  00000000  000008b8  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 15 .debug_line   0000026f  00000000  00000000  000008d8  2**0
+                  CONTENTS, RELOC, READONLY, DEBUGGING
+ 16 .debug_str    000003a8  00000000  00000000  00000b47  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 17 .comment      0000003b  00000000  00000000  00000eef  2**0
+                  CONTENTS, READONLY
+ 18 .xtensa.info  00000038  00000000  00000000  00000f2a  2**0
+                  CONTENTS, READONLY
+ 19 .xt.lit       00000008  00000000  00000000  00000f62  2**0
+                  CONTENTS, RELOC, READONLY
+ 20 .xt.prop      000000f0  00000000  00000000  00000f6a  2**0
                   CONTENTS, RELOC, READONLY
 
 mbcrc.o:     file format elf32-xtensa-le

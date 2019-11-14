@@ -36,10 +36,10 @@ Archive member included to satisfy reference by file (symbol)
                               /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_clock.o) (rtc_clk_init)
 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(gpio_periph.o)
                               /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_common.o) (GPIO_PIN_MUX_REG)
-/home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                              /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk_init.o) (rtc_clk_32k_enable)
 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
                               /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk_init.o) (rtc_clk_cal_ratio)
+/home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                              /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk_init.o) (rtc_clk_32k_enable)
 /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
                               /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o) (__bswapsi2)
 /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
@@ -298,6 +298,25 @@ Discarded input sections
  .rodata.GPIO_PIN_MUX_REG
                 0x0000000000000000       0xa0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(gpio_periph.o)
  .xt.prop       0x0000000000000000        0xc /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(gpio_periph.o)
+ .literal.rtc_clk_cal
+                0x0000000000000000        0xc /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .literal.rtc_time_us_to_slowclk
+                0x0000000000000000        0x4 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .literal.rtc_time_get
+                0x0000000000000000       0x18 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .text          0x0000000000000000        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .data          0x0000000000000000        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .bss           0x0000000000000000        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .text.rtc_clk_cal
+                0x0000000000000000       0x52 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .text.rtc_time_us_to_slowclk
+                0x0000000000000000       0x1f /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .text.rtc_time_slowclk_to_us
+                0x0000000000000000       0x1c /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .text.rtc_time_get
+                0x0000000000000000       0x50 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .xt.lit        0x0000000000000000       0x30 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .xt.prop       0x0000000000000000      0x288 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
  .literal.rtc_clk_32k_enable_external
                 0x0000000000000000        0x4 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .literal.rtc_clk_32k_bootstrap
@@ -355,25 +374,6 @@ Discarded input sections
                 0x0000000000000000       0x17 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .xt.lit        0x0000000000000000      0x120 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .xt.prop       0x0000000000000000      0xcc0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .literal.rtc_clk_cal
-                0x0000000000000000        0xc /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
- .literal.rtc_time_us_to_slowclk
-                0x0000000000000000        0x4 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
- .literal.rtc_time_get
-                0x0000000000000000       0x18 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
- .text          0x0000000000000000        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
- .data          0x0000000000000000        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
- .bss           0x0000000000000000        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
- .text.rtc_clk_cal
-                0x0000000000000000       0x52 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
- .text.rtc_time_us_to_slowclk
-                0x0000000000000000       0x1f /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
- .text.rtc_time_slowclk_to_us
-                0x0000000000000000       0x1c /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
- .text.rtc_time_get
-                0x0000000000000000       0x50 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
- .xt.lit        0x0000000000000000       0x30 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
- .xt.prop       0x0000000000000000      0x288 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
  .data          0x0000000000000000        0x0 /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .bss           0x0000000000000000        0x0 /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .xt.lit        0x0000000000000000        0x8 /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
@@ -966,7 +966,7 @@ END GROUP
  *(.gnu.version)
                 0x000000004007ad65                _loader_text_end = ABSOLUTE (.)
 
-.iram.text      0x0000000040080400     0x19f5
+.iram.text      0x0000000040080400     0x19f7
                 0x0000000040080400                . = ALIGN (0x10)
  *(.entry.text)
  *(.init.literal)
@@ -1032,83 +1032,83 @@ END GROUP
  .literal.rtc_clk_init
                 0x0000000040080620       0x48 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
                                          0xa4 (size before relaxing)
- .literal.rtc_clk_32k_enable_common
-                0x0000000040080668       0x10 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x14 (size before relaxing)
- .literal.rtc_clk_bbpll_disable
-                0x0000000040080678        0xc /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x10 (size before relaxing)
- .literal.rtc_clk_bbpll_enable
-                0x0000000040080684        0x8 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x1c (size before relaxing)
- .literal.rtc_clk_32k_enable
-                0x000000004008068c        0x8 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x10 (size before relaxing)
- .literal.rtc_clk_8m_enable
-                0x0000000040080694        0xc /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x10 (size before relaxing)
- .literal.rtc_clk_8m_enabled
-                0x00000000400806a0        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                          0x4 (size before relaxing)
- .literal.rtc_clk_8md256_enabled
-                0x00000000400806a0        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                          0x4 (size before relaxing)
- .literal.rtc_clk_slow_freq_set
-                0x00000000400806a0        0x4 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                          0xc (size before relaxing)
- .literal.rtc_clk_slow_freq_get
-                0x00000000400806a4        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                          0x4 (size before relaxing)
- .literal.rtc_clk_slow_freq_get_hz
-                0x00000000400806a4        0x8 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x10 (size before relaxing)
- .literal.rtc_clk_fast_freq_set
-                0x00000000400806ac        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                          0xc (size before relaxing)
- .literal.rtc_clk_fast_freq_get
-                0x00000000400806ac        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                          0x4 (size before relaxing)
- .literal.rtc_clk_bbpll_configure
-                0x00000000400806ac        0x8 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x3c (size before relaxing)
- .literal.rtc_clk_xtal_freq_get
-                0x00000000400806b4        0x4 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                          0x8 (size before relaxing)
- .literal.rtc_clk_cpu_freq_mhz_to_config
-                0x00000000400806b8        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                          0x4 (size before relaxing)
- .literal.rtc_clk_cpu_freq_get_config
-                0x00000000400806b8        0xc /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x30 (size before relaxing)
- .literal.rtc_clk_xtal_freq_update
-                0x00000000400806c4        0x4 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                          0x8 (size before relaxing)
- .literal.rtc_clk_apb_freq_update
-                0x00000000400806c8        0x4 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .literal.rtc_clk_cpu_freq_to_xtal
-                0x00000000400806cc        0xc /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x30 (size before relaxing)
- .literal.rtc_clk_cpu_freq_to_pll_mhz
-                0x00000000400806d8        0xc /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x40 (size before relaxing)
- .literal.rtc_clk_cpu_freq_to_8m
-                0x00000000400806e4        0x4 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x28 (size before relaxing)
- .literal.rtc_clk_cpu_freq_set_config
-                0x00000000400806e8        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x30 (size before relaxing)
- .literal.rtc_clk_apb_freq_get
-                0x00000000400806e8        0x4 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x10 (size before relaxing)
  .literal.rtc_clk_cal_internal
-                0x00000000400806ec       0x34 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000040080668       0x40 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
                                          0x68 (size before relaxing)
  .literal.rtc_clk_cal_ratio
-                0x0000000040080720        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x00000000400806a8        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
                                           0x8 (size before relaxing)
  .literal.rtc_clk_wait_for_slow_cycle
-                0x0000000040080720        0x8 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x00000000400806a8        0x8 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
                                          0x20 (size before relaxing)
+ .literal.rtc_clk_32k_enable_common
+                0x00000000400806b0       0x10 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x14 (size before relaxing)
+ .literal.rtc_clk_bbpll_disable
+                0x00000000400806c0        0xc /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x10 (size before relaxing)
+ .literal.rtc_clk_bbpll_enable
+                0x00000000400806cc        0x8 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x1c (size before relaxing)
+ .literal.rtc_clk_32k_enable
+                0x00000000400806d4        0x8 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x10 (size before relaxing)
+ .literal.rtc_clk_8m_enable
+                0x00000000400806dc        0x8 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x10 (size before relaxing)
+ .literal.rtc_clk_8m_enabled
+                0x00000000400806e4        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0x4 (size before relaxing)
+ .literal.rtc_clk_8md256_enabled
+                0x00000000400806e4        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0x4 (size before relaxing)
+ .literal.rtc_clk_slow_freq_set
+                0x00000000400806e4        0x4 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0xc (size before relaxing)
+ .literal.rtc_clk_slow_freq_get
+                0x00000000400806e8        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0x4 (size before relaxing)
+ .literal.rtc_clk_slow_freq_get_hz
+                0x00000000400806e8        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x10 (size before relaxing)
+ .literal.rtc_clk_fast_freq_set
+                0x00000000400806e8        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0xc (size before relaxing)
+ .literal.rtc_clk_fast_freq_get
+                0x00000000400806e8        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0x4 (size before relaxing)
+ .literal.rtc_clk_bbpll_configure
+                0x00000000400806e8        0x8 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x3c (size before relaxing)
+ .literal.rtc_clk_xtal_freq_get
+                0x00000000400806f0        0x4 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0x8 (size before relaxing)
+ .literal.rtc_clk_cpu_freq_mhz_to_config
+                0x00000000400806f4        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0x4 (size before relaxing)
+ .literal.rtc_clk_cpu_freq_get_config
+                0x00000000400806f4        0xc /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x30 (size before relaxing)
+ .literal.rtc_clk_xtal_freq_update
+                0x0000000040080700        0x4 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                          0x8 (size before relaxing)
+ .literal.rtc_clk_apb_freq_update
+                0x0000000040080704        0x4 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ .literal.rtc_clk_cpu_freq_to_xtal
+                0x0000000040080708        0xc /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x30 (size before relaxing)
+ .literal.rtc_clk_cpu_freq_to_pll_mhz
+                0x0000000040080714        0xc /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x40 (size before relaxing)
+ .literal.rtc_clk_cpu_freq_to_8m
+                0x0000000040080720        0x4 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x28 (size before relaxing)
+ .literal.rtc_clk_cpu_freq_set_config
+                0x0000000040080724        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x30 (size before relaxing)
+ .literal.rtc_clk_apb_freq_get
+                0x0000000040080724        0x4 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x10 (size before relaxing)
  .text.selected_boot_partition
                 0x0000000040080728        0xc /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/main/libmain.a(bootloader_start.o)
                                          0x10 (size before relaxing)
@@ -1184,140 +1184,140 @@ END GROUP
                                         0x20a (size before relaxing)
                 0x000000004008117c                rtc_clk_init
  *fill*         0x0000000040081356        0x2 
- .text.rtc_clk_32k_enable_common
-                0x0000000040081358       0x81 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
- *fill*         0x00000000400813d9        0x3 
- .text.rtc_clk_bbpll_disable
-                0x00000000400813dc       0x3e /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
- *fill*         0x000000004008141a        0x2 
- .text.rtc_clk_bbpll_enable
-                0x000000004008141c       0x66 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
- *fill*         0x0000000040081482        0x2 
- .text.rtc_clk_32k_enable
-                0x0000000040081484       0x3d /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040081484                rtc_clk_32k_enable
- *fill*         0x00000000400814c1        0x3 
- .text.rtc_clk_8m_enable
-                0x00000000400814c4       0x9b /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x00000000400814c4                rtc_clk_8m_enable
- *fill*         0x000000004008155f        0x1 
- .text.rtc_clk_8m_enabled
-                0x0000000040081560       0x19 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040081560                rtc_clk_8m_enabled
- *fill*         0x0000000040081579        0x3 
- .text.rtc_clk_8md256_enabled
-                0x000000004008157c       0x1a /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x000000004008157c                rtc_clk_8md256_enabled
- *fill*         0x0000000040081596        0x2 
- .text.rtc_clk_slow_freq_set
-                0x0000000040081598       0x48 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040081598                rtc_clk_slow_freq_set
- .text.rtc_clk_slow_freq_get
-                0x00000000400815e0       0x10 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x00000000400815e0                rtc_clk_slow_freq_get
- .text.rtc_clk_slow_freq_get_hz
-                0x00000000400815f0       0x29 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x00000000400815f0                rtc_clk_slow_freq_get_hz
- *fill*         0x0000000040081619        0x3 
- .text.rtc_clk_fast_freq_set
-                0x000000004008161c       0x2a /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x000000004008161c                rtc_clk_fast_freq_set
- *fill*         0x0000000040081646        0x2 
- .text.rtc_clk_fast_freq_get
-                0x0000000040081648       0x10 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040081648                rtc_clk_fast_freq_get
- .text.rtc_clk_bbpll_configure
-                0x0000000040081658      0x1a1 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                        0x1a5 (size before relaxing)
-                0x0000000040081658                rtc_clk_bbpll_configure
- *fill*         0x00000000400817f9        0x3 
- .text.rtc_clk_xtal_freq_get
-                0x00000000400817fc       0x35 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x00000000400817fc                rtc_get_xtal
-                0x00000000400817fc                rtc_clk_xtal_freq_get
- *fill*         0x0000000040081831        0x3 
- .text.rtc_clk_cpu_freq_mhz_to_config
-                0x0000000040081834       0x61 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040081834                rtc_clk_cpu_freq_mhz_to_config
- *fill*         0x0000000040081895        0x3 
- .text.rtc_clk_cpu_freq_get_config
-                0x0000000040081898       0xa9 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0xb5 (size before relaxing)
-                0x0000000040081898                rtc_clk_cpu_freq_get_config
- *fill*         0x0000000040081941        0x3 
- .text.rtc_clk_xtal_freq_update
-                0x0000000040081944       0x2c /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040081944                rtc_clk_xtal_freq_update
- .text.rtc_clk_apb_freq_update
-                0x0000000040081970       0x19 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040081970                rtc_clk_apb_freq_update
- *fill*         0x0000000040081989        0x3 
- .text.rtc_clk_cpu_freq_to_xtal
-                0x000000004008198c       0x97 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x9b (size before relaxing)
-                0x000000004008198c                rtc_clk_cpu_freq_to_xtal
- *fill*         0x0000000040081a23        0x1 
- .text.rtc_clk_cpu_freq_to_pll_mhz
-                0x0000000040081a24       0x9c /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0xa4 (size before relaxing)
- .text.rtc_clk_cpu_freq_to_8m
-                0x0000000040081ac0       0x58 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x5c (size before relaxing)
- .text.rtc_clk_cpu_freq_set_config
-                0x0000000040081b18       0x5b /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                         0x76 (size before relaxing)
-                0x0000000040081b18                rtc_clk_cpu_freq_set_config
- *fill*         0x0000000040081b73        0x1 
- .text.rtc_clk_apb_freq_get
-                0x0000000040081b74       0x27 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                0x0000000040081b74                rtc_clk_apb_freq_get
- *fill*         0x0000000040081b9b        0x1 
  .text.rtc_clk_cal_internal
-                0x0000000040081b9c      0x1c0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000040081358      0x1c0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
                                         0x1cc (size before relaxing)
  .text.rtc_clk_cal_ratio
-                0x0000000040081d5c       0x20 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000040081518       0x20 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
                                          0x24 (size before relaxing)
-                0x0000000040081d5c                rtc_clk_cal_ratio
+                0x0000000040081518                rtc_clk_cal_ratio
  .text.rtc_clk_wait_for_slow_cycle
-                0x0000000040081d7c       0x79 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
-                0x0000000040081d7c                rtc_clk_wait_for_slow_cycle
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
- *fill*         0x0000000040081df5        0x0 
+                0x0000000040081538       0x79 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000040081538                rtc_clk_wait_for_slow_cycle
+ *fill*         0x00000000400815b1        0x3 
+ .text.rtc_clk_32k_enable_common
+                0x00000000400815b4       0x81 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ *fill*         0x0000000040081635        0x3 
+ .text.rtc_clk_bbpll_disable
+                0x0000000040081638       0x3e /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ *fill*         0x0000000040081676        0x2 
+ .text.rtc_clk_bbpll_enable
+                0x0000000040081678       0x66 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+ *fill*         0x00000000400816de        0x2 
+ .text.rtc_clk_32k_enable
+                0x00000000400816e0       0x3d /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400816e0                rtc_clk_32k_enable
+ *fill*         0x000000004008171d        0x3 
+ .text.rtc_clk_8m_enable
+                0x0000000040081720       0x9b /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040081720                rtc_clk_8m_enable
+ *fill*         0x00000000400817bb        0x1 
+ .text.rtc_clk_8m_enabled
+                0x00000000400817bc       0x19 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400817bc                rtc_clk_8m_enabled
+ *fill*         0x00000000400817d5        0x3 
+ .text.rtc_clk_8md256_enabled
+                0x00000000400817d8       0x1a /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400817d8                rtc_clk_8md256_enabled
+ *fill*         0x00000000400817f2        0x2 
+ .text.rtc_clk_slow_freq_set
+                0x00000000400817f4       0x48 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400817f4                rtc_clk_slow_freq_set
+ .text.rtc_clk_slow_freq_get
+                0x000000004008183c       0x10 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004008183c                rtc_clk_slow_freq_get
+ .text.rtc_clk_slow_freq_get_hz
+                0x000000004008184c       0x29 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x000000004008184c                rtc_clk_slow_freq_get_hz
+ *fill*         0x0000000040081875        0x3 
+ .text.rtc_clk_fast_freq_set
+                0x0000000040081878       0x2a /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040081878                rtc_clk_fast_freq_set
+ *fill*         0x00000000400818a2        0x2 
+ .text.rtc_clk_fast_freq_get
+                0x00000000400818a4       0x10 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000400818a4                rtc_clk_fast_freq_get
+ .text.rtc_clk_bbpll_configure
+                0x00000000400818b4      0x1a1 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                        0x1a5 (size before relaxing)
+                0x00000000400818b4                rtc_clk_bbpll_configure
+ *fill*         0x0000000040081a55        0x3 
+ .text.rtc_clk_xtal_freq_get
+                0x0000000040081a58       0x35 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040081a58                rtc_get_xtal
+                0x0000000040081a58                rtc_clk_xtal_freq_get
+ *fill*         0x0000000040081a8d        0x3 
+ .text.rtc_clk_cpu_freq_mhz_to_config
+                0x0000000040081a90       0x61 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040081a90                rtc_clk_cpu_freq_mhz_to_config
+ *fill*         0x0000000040081af1        0x3 
+ .text.rtc_clk_cpu_freq_get_config
+                0x0000000040081af4       0xa9 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0xb5 (size before relaxing)
+                0x0000000040081af4                rtc_clk_cpu_freq_get_config
+ *fill*         0x0000000040081b9d        0x3 
+ .text.rtc_clk_xtal_freq_update
+                0x0000000040081ba0       0x2c /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040081ba0                rtc_clk_xtal_freq_update
+ .text.rtc_clk_apb_freq_update
+                0x0000000040081bcc       0x19 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040081bcc                rtc_clk_apb_freq_update
+ *fill*         0x0000000040081be5        0x3 
+ .text.rtc_clk_cpu_freq_to_xtal
+                0x0000000040081be8       0x97 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x9b (size before relaxing)
+                0x0000000040081be8                rtc_clk_cpu_freq_to_xtal
+ *fill*         0x0000000040081c7f        0x1 
+ .text.rtc_clk_cpu_freq_to_pll_mhz
+                0x0000000040081c80       0x9c /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0xa4 (size before relaxing)
+ .text.rtc_clk_cpu_freq_to_8m
+                0x0000000040081d1c       0x58 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x5c (size before relaxing)
+ .text.rtc_clk_cpu_freq_set_config
+                0x0000000040081d74       0x5b /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0x76 (size before relaxing)
+                0x0000000040081d74                rtc_clk_cpu_freq_set_config
+ *fill*         0x0000000040081dcf        0x1 
+ .text.rtc_clk_apb_freq_get
+                0x0000000040081dd0       0x27 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x0000000040081dd0                rtc_clk_apb_freq_get
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
+ *fill*         0x0000000040081df7        0x0 
  *(.iram .iram.*)
  *(.fini.literal)
  *(.fini)
  *(.gnu.version)
-                0x0000000040081df5                _text_end = ABSOLUTE (.)
-                0x0000000040081df5                _etext = .
+                0x0000000040081df7                _text_end = ABSOLUTE (.)
+                0x0000000040081df7                _etext = .
 
 .dram0.bss      0x000000003fff0000       0x18
                 0x000000003fff0000                . = ALIGN (0x8)
@@ -1366,7 +1366,7 @@ END GROUP
  *(.jcr)
                 0x000000003fff001c                _data_end = ABSOLUTE (.)
 
-.dram0.rodata   0x000000003fff001c     0x18ac
+.dram0.rodata   0x000000003fff001c     0x18a8
                 0x000000003fff001c                _rodata_start = ABSOLUTE (.)
  *(.rodata)
  .rodata        0x000000003fff001c       0x14 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
@@ -1376,91 +1376,91 @@ END GROUP
                 0x000000003fff0038       0x3b /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/main/libmain.a(bootloader_start.o)
  *fill*         0x000000003fff0073        0x1 
  .rodata.str1.4
-                0x000000003fff0074      0x3d6 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
-                                        0x3de (size before relaxing)
- *fill*         0x000000003fff044a        0x2 
+                0x000000003fff0074      0x3d2 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                                        0x3da (size before relaxing)
+ *fill*         0x000000003fff0446        0x2 
  .rodata.__func__$4726
-                0x000000003fff044c       0x10 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
+                0x000000003fff0448       0x10 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_init.o)
  .rodata.str1.4
-                0x000000003fff045c       0x5f /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- *fill*         0x000000003fff04bb        0x1 
+                0x000000003fff0458       0x5f /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ *fill*         0x000000003fff04b7        0x1 
  .rodata.__func__$2290
-                0x000000003fff04bc       0x17 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
- *fill*         0x000000003fff04d3        0x1 
+                0x000000003fff04b8       0x17 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_random.o)
+ *fill*         0x000000003fff04cf        0x1 
  .rodata.str1.4
-                0x000000003fff04d4      0x163 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
- *fill*         0x000000003fff0637        0x1 
+                0x000000003fff04d0      0x163 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(flash_partitions.o)
+ *fill*         0x000000003fff0633        0x1 
  .rodata.str1.4
-                0x000000003fff0638      0x512 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
+                0x000000003fff0634      0x512 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(esp_image_format.o)
                                         0x516 (size before relaxing)
- *fill*         0x000000003fff0b4a        0x2 
+ *fill*         0x000000003fff0b46        0x2 
  .rodata.str1.4
-                0x000000003fff0b4c       0xc8 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x000000003fff0b48       0xc8 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  .rodata.padding$3889
-                0x000000003fff0c14       0x40 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+                0x000000003fff0c10       0x40 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
  .rodata.__func__$3885
-                0x000000003fff0c54       0x19 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- *fill*         0x000000003fff0c6d        0x3 
+                0x000000003fff0c50       0x19 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ *fill*         0x000000003fff0c69        0x3 
  .rodata.__func__$3865
-                0x000000003fff0c70       0x17 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
- *fill*         0x000000003fff0c87        0x1 
+                0x000000003fff0c6c       0x17 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_sha.o)
+ *fill*         0x000000003fff0c83        0x1 
  .rodata.str1.4
-                0x000000003fff0c88      0x5fd /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x000000003fff0c84      0x5fd /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
                                         0x641 (size before relaxing)
- *fill*         0x000000003fff1285        0x3 
+ *fill*         0x000000003fff1281        0x3 
  .rodata.bootloader_utility_load_partition_table
-                0x000000003fff1288       0x18 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
+                0x000000003fff1284       0x18 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_utility.o)
  .rodata.str1.4
-                0x000000003fff12a0      0x28e /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
- *fill*         0x000000003fff152e        0x2 
+                0x000000003fff129c      0x28e /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader_support/libbootloader_support.a(bootloader_flash.o)
+ *fill*         0x000000003fff152a        0x2 
  .rodata.str1.4
-                0x000000003fff1530      0x1cb /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- *fill*         0x000000003fff16fb        0x1 
+                0x000000003fff152c      0x1cb /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+ *fill*         0x000000003fff16f7        0x1 
  .rodata.rtc_clk_xtal_freq_estimate
-                0x000000003fff16fc       0x64 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
+                0x000000003fff16f8       0x64 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .rodata.str1.4
-                0x000000003fff1760       0xa1 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
- *fill*         0x000000003fff1801        0x3 
- .rodata.str1.4
-                0x000000003fff1804       0xac /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
-                                         0xa9 (size before relaxing)
+                0x000000003fff175c       0xa9 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ *fill*         0x000000003fff1805        0x3 
  .rodata.__func__$1848
-                0x000000003fff18b0       0x15 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x000000003fff1808       0x15 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ *fill*         0x000000003fff181d        0x3 
+ .rodata.str1.4
+                0x000000003fff1820       0xa4 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                         0xa1 (size before relaxing)
  *(.gnu.linkonce.r.*)
  *(.rodata1)
-                0x000000003fff18c5                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
+                0x000000003fff18c4                __XT_EXCEPTION_TABLE_ = ABSOLUTE (.)
  *(.xt_except_table)
  *(.gcc_except_table)
  *(.gnu.linkonce.e.*)
  *(.gnu.version_r)
  *(.eh_frame)
-                0x000000003fff18c8                . = ((. + 0x3) & 0xfffffffffffffffc)
- *fill*         0x000000003fff18c5        0x3 
-                0x000000003fff18c8                __init_array_start = ABSOLUTE (.)
+                0x000000003fff18c4                . = ((. + 0x3) & 0xfffffffffffffffc)
+                0x000000003fff18c4                __init_array_start = ABSOLUTE (.)
  *crtbegin.*(.ctors)
  *(EXCLUDE_FILE(*crtend.*) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
-                0x000000003fff18c8                __init_array_end = ABSOLUTE (.)
+                0x000000003fff18c4                __init_array_end = ABSOLUTE (.)
  *crtbegin.*(.dtors)
  *(EXCLUDE_FILE(*crtend.*) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
-                0x000000003fff18c8                __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
+                0x000000003fff18c4                __XT_EXCEPTION_DESCS_ = ABSOLUTE (.)
  *(.xt_except_desc)
  *(.gnu.linkonce.h.*)
-                0x000000003fff18c8                __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
+                0x000000003fff18c4                __XT_EXCEPTION_DESCS_END__ = ABSOLUTE (.)
  *(.xt_except_desc_end)
  *(.dynamic)
  *(.gnu.version_d)
-                0x000000003fff18c8                _rodata_end = ABSOLUTE (.)
-                0x000000003fff18c8                _lit4_start = ABSOLUTE (.)
+                0x000000003fff18c4                _rodata_end = ABSOLUTE (.)
+                0x000000003fff18c4                _lit4_start = ABSOLUTE (.)
  *(*.lit4)
  *(.lit4.*)
  *(.gnu.linkonce.lit4.*)
-                0x000000003fff18c8                _lit4_end = ABSOLUTE (.)
-                0x000000003fff18c8                . = ALIGN (0x4)
-                0x000000003fff18c8                _heap_start = ABSOLUTE (.)
+                0x000000003fff18c4                _lit4_end = ABSOLUTE (.)
+                0x000000003fff18c4                . = ALIGN (0x4)
+                0x000000003fff18c4                _heap_start = ABSOLUTE (.)
                 [!provide]                        PROVIDE (Add2SelfBigHex256, 0x40015b7c)
                 [!provide]                        PROVIDE (AddBigHex256, 0x40015b28)
                 [!provide]                        PROVIDE (AddBigHexModP256, 0x40015c98)
@@ -3199,8 +3199,8 @@ OUTPUT(/home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader.
  .debug_frame   0x0000000000000b90      0x130 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_wdt.o)
  .debug_frame   0x0000000000000cc0       0x58 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_init.o)
  .debug_frame   0x0000000000000d18       0x40 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- .debug_frame   0x0000000000000d58      0x370 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_frame   0x00000000000010c8       0xb8 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_frame   0x0000000000000d58       0xb8 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_frame   0x0000000000000e10      0x370 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .debug_frame   0x0000000000001180       0x28 /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .debug_frame   0x00000000000011a8       0x28 /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
@@ -3223,8 +3223,8 @@ OUTPUT(/home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader.
  .debug_info    0x000000000000b5d9      0x339 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_init.o)
  .debug_info    0x000000000000b912      0x7ce /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .debug_info    0x000000000000c0e0       0x95 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(gpio_periph.o)
- .debug_info    0x000000000000c175     0x1476 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_info    0x000000000000d5eb      0x4d8 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_info    0x000000000000c175      0x4d8 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_info    0x000000000000c64d     0x1476 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .debug_info    0x000000000000dac3       0xcd /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .debug_info    0x000000000000db90      0x5c8 /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
@@ -3247,8 +3247,8 @@ OUTPUT(/home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader.
  .debug_abbrev  0x0000000000002042      0x135 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_init.o)
  .debug_abbrev  0x0000000000002177      0x203 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .debug_abbrev  0x000000000000237a       0x5b /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(gpio_periph.o)
- .debug_abbrev  0x00000000000023d5      0x33e /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_abbrev  0x0000000000002713      0x1ba /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_abbrev  0x00000000000023d5      0x1ba /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_abbrev  0x000000000000258f      0x33e /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .debug_abbrev  0x00000000000028cd       0x60 /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .debug_abbrev  0x000000000000292d      0x15f /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
@@ -3270,8 +3270,8 @@ OUTPUT(/home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader.
  .debug_loc     0x0000000000004229      0x2e5 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_wdt.o)
  .debug_loc     0x000000000000450e      0x245 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_init.o)
  .debug_loc     0x0000000000004753      0x1d6 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- .debug_loc     0x0000000000004929      0xbfd /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_loc     0x0000000000005526      0x227 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_loc     0x0000000000004929      0x227 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_loc     0x0000000000004b50      0xbfd /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .debug_loc     0x000000000000574d       0x21 /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .debug_loc     0x000000000000576e      0x9e8 /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
@@ -3313,9 +3313,9 @@ OUTPUT(/home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader.
  .debug_aranges
                 0x00000000000005b0       0x18 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(gpio_periph.o)
  .debug_aranges
-                0x00000000000005c8      0x138 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                0x00000000000005c8       0x50 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
  .debug_aranges
-                0x0000000000000700       0x50 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+                0x0000000000000618      0x138 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .debug_aranges
                 0x0000000000000750       0x20 /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .debug_aranges
@@ -3339,8 +3339,8 @@ OUTPUT(/home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader.
  .debug_ranges  0x0000000000000568       0x68 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_wdt.o)
  .debug_ranges  0x00000000000005d0       0x20 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_init.o)
  .debug_ranges  0x00000000000005f0       0x18 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
- .debug_ranges  0x0000000000000608      0x140 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_ranges  0x0000000000000748       0x40 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_ranges  0x0000000000000608       0x40 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_ranges  0x0000000000000648      0x140 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .debug_ranges  0x0000000000000788       0x60 /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
 .debug_line     0x0000000000000000     0x75f2
@@ -3362,8 +3362,8 @@ OUTPUT(/home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader.
  .debug_line    0x00000000000059d1      0x3ca /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_init.o)
  .debug_line    0x0000000000005d9b      0x3b9 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .debug_line    0x0000000000006154       0xfa /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(gpio_periph.o)
- .debug_line    0x000000000000624e      0xd71 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
- .debug_line    0x0000000000006fbf      0x41c /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_line    0x000000000000624e      0x41c /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_line    0x000000000000666a      0xd71 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .debug_line    0x00000000000073db       0x89 /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .debug_line    0x0000000000007464      0x18e /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
@@ -3404,10 +3404,10 @@ OUTPUT(/home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader.
                                         0x6b6 (size before relaxing)
  .debug_str     0x00000000000043da       0x3c /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(gpio_periph.o)
                                         0x142 (size before relaxing)
- .debug_str     0x0000000000004416      0x573 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
-                                        0xafd (size before relaxing)
- .debug_str     0x0000000000004989      0x140 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .debug_str     0x0000000000004416      0x164 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
                                         0x461 (size before relaxing)
+ .debug_str     0x000000000000457a      0x54f /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
+                                        0xafd (size before relaxing)
  .debug_str     0x0000000000004ac9      0x138 /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
                                         0x1de (size before relaxing)
  .debug_str     0x0000000000004c01       0xdc /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
@@ -3433,8 +3433,8 @@ OUTPUT(/home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader.
  .comment       0x000000000000003a       0x3b /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_init.o)
  .comment       0x000000000000003a       0x3b /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .comment       0x000000000000003a       0x3b /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(gpio_periph.o)
- .comment       0x000000000000003a       0x3b /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .comment       0x000000000000003a       0x3b /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .comment       0x000000000000003a       0x3b /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .comment       0x000000000000003a       0x3b /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .comment       0x000000000000003a       0x3b /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)
 
@@ -3457,7 +3457,7 @@ OUTPUT(/home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/bootloader.
  .xtensa.info   0x0000000000000038        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_init.o)
  .xtensa.info   0x0000000000000038        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk_init.o)
  .xtensa.info   0x0000000000000038        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(gpio_periph.o)
- .xtensa.info   0x0000000000000038        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .xtensa.info   0x0000000000000038        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_time.o)
+ .xtensa.info   0x0000000000000038        0x0 /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader/soc/libsoc.a(rtc_clk.o)
  .xtensa.info   0x0000000000000038        0x0 /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_bswapsi2.o)
  .xtensa.info   0x0000000000000038        0x0 /home/pierre/esp/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/5.2.0/libgcc.a(_udivdi3.o)

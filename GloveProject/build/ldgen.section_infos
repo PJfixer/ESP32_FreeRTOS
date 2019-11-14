@@ -1,7 +1,10 @@
-/home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/app_trace/libapp_trace.a.sections_info
+/home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/ADC/libADC.a.sections_info
+ /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/RGB/libRGB.a.sections_info
+ /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/app_trace/libapp_trace.a.sections_info
  /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/app_update/libapp_update.a.sections_info
  /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/asio/libasio.a.sections_info
  /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/aws_iot/libaws_iot.a.sections_info
+ /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bluetooth/libbluetooth.a.sections_info
  /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bootloader_support/libbootloader_support.a.sections_info
  /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/bt/libbt.a.sections_info
  /home/pierre/esp/ESP32_FreeRTOS/GloveProject/build/coap/libcoap.a.sections_info
