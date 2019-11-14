@@ -1,5 +1,5 @@
-# Blink Example
+# VESC control over uart
 
-Starts a FreeRTOS task to blink an LED
+Use Uart to get VESC values & set speed 
 
-See the README.md file in the upper level 'examples' directory for more information about examples.
+
