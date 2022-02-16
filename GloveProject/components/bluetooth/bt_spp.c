@@ -74,7 +74,7 @@ static void esp_spp_cb(esp_spp_cb_event_t event, esp_spp_cb_param_t *param)
     case ESP_SPP_INIT_EVT:
         ESP_LOGI(SPP_TAG, "ESP_SPP_INIT_EVT");
         esp_bt_dev_set_device_name("ESP32");
-        esp_bt_gap_set_scan_mode(ESP_BT_SCAN_MODE_CONNECTABLE_DISCOVERABLE);
+        esp_bt_gap_set_scan_mode(ESP_BT_CONNECTABLE, ESP_BT_GENERAL_DISCOVERABLE);
         esp_bt_gap_start_discovery(inq_mode, inq_len, inq_num_rsps);
 
         break;
@@ -137,12 +137,11 @@ static void esp_bt_gap_cb(esp_bt_gap_cb_event_t event, esp_bt_gap_cb_param_t *pa
         for (int i = 0; i < param->disc_res.num_prop; i++){
             if (param->disc_res.prop[i].type == ESP_BT_GAP_DEV_PROP_EIR && get_name_from_eir(param->disc_res.prop[i].val, peer_bdname, &peer_bdname_len)){
                 esp_log_buffer_char(SPP_TAG, peer_bdname, peer_bdname_len);
-               /* if (strlen(remote_device_name) == peer_bdname_len
-                    && strncmp(peer_bdname, remote_device_name, peer_bdname_len) == 0) {
+                if (strlen(remote_device_name) == peer_bdname_len && strncmp(peer_bdname, remote_device_name, peer_bdname_len) == 0) {  // if length and string content match the one we are looking for
                     memcpy(peer_bd_addr, param->disc_res.bda, ESP_BD_ADDR_LEN);
-                    esp_spp_start_discovery(peer_bd_addr);
-                    esp_bt_gap_cancel_discovery();
-                }*/
+                    esp_spp_start_discovery(peer_bd_addr);  // start to discover the SPP profile
+                    esp_bt_gap_cancel_discovery();  // Generic acces profile is not needed anymore since we find our device , so we stop the GAP discovery
+                }
             }
         }
         break;

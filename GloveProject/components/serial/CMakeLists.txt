@@ -1,4 +1,2 @@
-set(COMPONENT_SRCS "serial.c")
-set(COMPONENT_ADD_INCLUDEDIRS ".")
-
-register_component()
+idf_component_register(SRCS "serial.c"
+                       INCLUDE_DIRS ".")

@@ -1,7 +1,6 @@
 
 
 #include "RGB.h"
-#include "adc.h"
 
 
 extern QueueHandle_t RGB_task_queue;

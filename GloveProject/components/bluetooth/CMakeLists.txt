@@ -1,4 +1,2 @@
-set(COMPONENT_SRCS "bt_spp.c")
-set(COMPONENT_ADD_INCLUDEDIRS ".")
-
-register_component()
+idf_component_register(SRCS "bt_spp.c"
+                       INCLUDE_DIRS "." REQUIRES "nvs_flash" "bt")
